@@ -116,7 +116,7 @@ step2.querySelectorAll("button").forEach(b => {
 
     // Imagen y etiqueta
     const img = document.createElement("img");
-    img.src = "bolson.png";
+    img.src = "bolson.jpg";
     img.alt = `Bolsón de ${selectedTipo} (${condicion})`;
 
     const label = document.createElement("p");
@@ -312,3 +312,4 @@ function loadState() {
 
   updateExtractedCounters();
 }
+
