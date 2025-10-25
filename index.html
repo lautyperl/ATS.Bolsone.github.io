@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATS Agrotecnología y Servicios</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo ATS">
+      <span>Agrotecnología y Servicios</span>
+    </div>
+
+    <div class="counters">
+      <div class="counter">
+        <h2 id="total">0</h2>
+        <span>Bolsones Totales</span>
+      </div>
+      <div class="counter">
+        <h2 id="maiz">0</h2>
+        <span>Maíz</span>
+      </div>
+      <div class="counter">
+        <h2 id="soja">0</h2>
+        <span>Soja</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contadores de extraídos -->
+  <section class="extracted-counters">
+    <div class="counter extracted">
+      <h2 id="extraidos">0</h2>
+      <span>Bolsones Extraídos</span>
+    </div>
+    <div class="counter extracted">
+      <h2 id="extraMaiz">0</h2>
+      <span>Maíz Extraído</span>
+    </div>
+    <div class="counter extracted">
+      <h2 id="extraSoja">0</h2>
+      <span>Soja Extraída</span>
+    </div>
+  </section>
+
+  <main>
+    <button id="addBolson">Agregar Bolsón</button>
+    <button id="newGroup">Nuevo Grupo de Bolsones</button>
+    <div id="groups"></div>
+  </main>
+
+  <!-- Botón Reiniciar -->
+  <footer>
+    <button id="resetAll" class="reset-btn">Reiniciar</button>
+  </footer>
+
+  <!-- Modal selección tipo/condición -->
+  <div class="modal" id="modal">
+    <div class="modal-content" id="modalContent">
+      <h3>Selecciona el tipo de bolsón</h3>
+      <div class="options" id="step1">
+        <button data-tipo="maiz">🌽 Maíz</button>
+        <button data-tipo="soja">🌱 Soja</button>
+      </div>
+      <div class="options" id="step2" style="display:none;">
+        <button data-cond="humedo">Húmedo</button>
+        <button data-cond="seco">Seco</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de confirmación -->
+  <div class="modal" id="confirmModal">
+    <div class="modal-content">
+      <h3 id="confirmText">¿Eliminar este bolsón?</h3>
+      <div class="options">
+        <button id="confirmDelete">Sí, eliminar</button>
+        <button id="cancelDelete">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
